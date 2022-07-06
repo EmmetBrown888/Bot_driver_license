@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  bot:
+    container_name: telegram_bot
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: python3 main.py
+    volumes:
+      - .:/home/Telegram_bot
